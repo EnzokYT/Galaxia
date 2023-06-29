@@ -1,0 +1,29 @@
+{
+  "item.galaxia.galaxium_fragment": "Galaxium Fragment",
+  "item.galaxia.galaxium": "Galaxium",
+  "block.galaxia.galaxium_block": "Galaxium Block",
+  "block.galaxia.galaxium_ore": "Galaxium Ore",
+
+  "item.galaxia.galaxium_helmet": "Galaxium Helmet",
+  "item.galaxia.galaxium_chestplate": "Galaxium Chestplate",
+  "item.galaxia.galaxium_leggings": "Galaxium Leggings",
+  "item.galaxia.galaxium_boots": "Galaxium Boots",
+
+  "item.galaxia.bismuth": "Bismuth",
+  "block.galaxia.bismuth_block": "Bismuth Block",
+  "block.galaxia.bismuth_ore": "Bismuth Ore",
+
+
+
+  "item.galaxia.iron_stick": "Iron Stick",
+  "item.galaxia.diamond_stick": "Diamond Stick",
+  "item.galaxia.moon_stick": "Moon Stick",
+
+  "block.galaxia.end_block": "End Block",
+  "block.galaxia.moon_cobble": "Moon Cobble",
+  "block.galaxia.moon_stone": "Moon Stone",
+
+  "creativemodetab.galaxia_items_tab": "Galaxia Items",
+  "creativemodetab.galaxia_tools": "Galaxia Tools",
+  "creativemodetab.galaxia_blocks_tab": "Galaxia Blocks"
+}
