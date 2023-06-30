@@ -4,6 +4,8 @@
     "galaxia:galaxium_ore",
     "galaxia:bismuth_ore",
     "galaxia:galaxium_block",
-    "galaxia:bismuth_block"
+    "galaxia:bismuth_block",
+    "galaxia:moon_stone",
+    "galaxia:moon_cobble"
   ]
 }

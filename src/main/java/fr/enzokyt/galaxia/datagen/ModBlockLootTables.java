@@ -19,12 +19,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.GALAXIUM_BLOCK.get());
         dropSelf(ModBlocks.END_BLOCK.get());
         dropSelf(ModBlocks.MOON_COBBLE.get());
-        dropSelf(ModBlocks.MOON_STONE.get());
 
         add(ModBlocks.GALAXIUM_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.GALAXIUM_ORE.get(), ModItems.GALAXIUM_FRAGMENT.get()));
         add(ModBlocks.BISMUTH_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.BISMUTH_ORE.get(), ModItems.BISMUTH.get()));
+
+        add(ModBlocks.MOON_STONE.get(),
+                (block) -> createSingleItemTableWithSilkTouch(block, ModBlocks.MOON_COBBLE.get()));
     }
 
     protected Iterable<Block> getKnownBlocks() {

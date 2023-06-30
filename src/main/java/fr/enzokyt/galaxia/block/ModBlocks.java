@@ -35,12 +35,12 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MOON_COBBLE = registerBlock("moon_cobble",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
 
     public static final RegistryObject<Block> MOON_STONE = registerBlock("moon_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
 
 //ORE
     public static final RegistryObject<Block> GALAXIUM_ORE = registerBlock("galaxium_ore",
@@ -50,6 +50,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(2, 6)));
+
 
 
 
