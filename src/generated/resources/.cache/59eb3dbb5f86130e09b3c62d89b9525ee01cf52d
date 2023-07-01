@@ -1,0 +1,8 @@
+// 1.19.4	2023-06-30T19:51:26.4272547	Loot Tables
+613f1ccea72cb29e6d99bc4f9cdcfd48a668e850 data/galaxia/loot_tables/blocks/bismuth_block.json
+6badd6d38ef2715437114d5d219e66ef8a84bf2a data/galaxia/loot_tables/blocks/bismuth_ore.json
+9b396a41703986d078251949ed336cc8df0abbda data/galaxia/loot_tables/blocks/end_block.json
+afb36fbdbf242aa674c21b778772d63a98deba01 data/galaxia/loot_tables/blocks/galaxium_block.json
+ff50a9e03404be152a14fc4a62bfeaa63b4e433a data/galaxia/loot_tables/blocks/galaxium_ore.json
+377665feddc75fccad1abba97c860156ad4cdb10 data/galaxia/loot_tables/blocks/moon_cobble.json
+39736b3db27ee18030b4f6dcf2e0a6107a7de764 data/galaxia/loot_tables/blocks/moon_stone.json

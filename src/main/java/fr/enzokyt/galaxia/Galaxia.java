@@ -2,14 +2,15 @@ package fr.enzokyt.galaxia;
 
 import com.mojang.logging.LogUtils;
 import fr.enzokyt.galaxia.block.ModBlocks;
+import fr.enzokyt.galaxia.block.entity.ModBlockEntities;
+import fr.enzokyt.galaxia.block.entity.client.GemInfuserRenderer;
 import fr.enzokyt.galaxia.item.ModCreativeTabs;
 import fr.enzokyt.galaxia.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Galaxia.MOD_ID)
@@ -30,8 +32,11 @@ public class Galaxia {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        modEventBus.addListener(this::commonSetup);
+        ModBlockEntities.register(modEventBus);
 
+        GeckoLib.initialize();
+
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -57,6 +62,7 @@ public class Galaxia {
             event.accept(ModBlocks.MOON_STONE);
             event.accept(ModBlocks.MOON_COBBLE);
             event.accept(ModBlocks.END_BLOCK);
+            event.accept(ModItems.GEM_INFUSER_ITEM);
         }
 
         if(event.getTab() == ModCreativeTabs.GALAXIA_ARMOR) {
@@ -77,6 +83,7 @@ public class Galaxia {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            BlockEntityRenderers.register(ModBlockEntities.GEM_INFUSER_ENTITY.get(), GemInfuserRenderer::new );
 
         }
     }

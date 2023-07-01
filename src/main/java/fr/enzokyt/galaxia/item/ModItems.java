@@ -1,7 +1,9 @@
 package fr.enzokyt.galaxia.item;
 
 import fr.enzokyt.galaxia.Galaxia;
+import fr.enzokyt.galaxia.block.ModBlocks;
 import fr.enzokyt.galaxia.item.custom.GalaxiumArmorItem;
+import fr.enzokyt.galaxia.item.custom.GemInfuserItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -51,6 +53,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> MOON_STICK = ITEMS.register("moon_stick",
             () -> new Item(new Item.Properties()));
+
+    // --- [ ANIMATED ITEM ] ---
+    public static final RegistryObject<Item> GEM_INFUSER_ITEM = ITEMS.register("gem_infuser",
+            () -> new GemInfuserItem(ModBlocks.GEM_INFUSER.get(),new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

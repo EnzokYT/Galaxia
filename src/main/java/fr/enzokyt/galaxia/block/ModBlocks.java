@@ -1,6 +1,7 @@
 package fr.enzokyt.galaxia.block;
 
 import fr.enzokyt.galaxia.Galaxia;
+import fr.enzokyt.galaxia.block.custom.GemInfuser;
 import fr.enzokyt.galaxia.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -50,6 +51,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(2, 6)));
+
+//ANIMATED BLOCK
+    public static final RegistryObject<Block> GEM_INFUSER = BLOCKS.register("gem_infuser",
+            () -> new GemInfuser(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
 
 
 
